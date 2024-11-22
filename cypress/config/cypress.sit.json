@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://www.thsrc.com.tw/",
+  "env": {},
+  "specPatterns": [
+    "cypress/e2e/myTest/*.feature"
+  ]
+}

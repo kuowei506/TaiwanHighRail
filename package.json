@@ -1,0 +1,43 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "cypress-testing-tool",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open:sit": "cypress open --env environment=sit",
+    "cypress:open:uat": "cypress open --env environment=uat",
+    "cypress:run:sit": "cypress run --env environment=sit",
+    "cypress:run:uat": "cypress run --env environment=uat",
+    "cypress:report": "node cucumber-html-report.js",
+    "test:sit": "npm run cypress:run:sit && npm run cypress:report",
+    "test:uat": "npm run cypress:run:uat && npm run cypress:report"
+  },
+  "author": "Elsa Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.7.0",
+    "cypress-mochawesome-reporter": "^3.5.1",
+    "esbuild": "^0.19.4",
+    "multiple-cucumber-html-reporter": "^3.5.0",
+    "cypress-xpath": "^2.0.1",
+    "cypress-plugin-api": "^2.11.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "GlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/support/stepDefinitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    },
+    "messages": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-ndjson/cucumber-report.ndjson"
+    },
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-json/cucumber-report.json"
+    }
+  }
+}

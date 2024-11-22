@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://firezero1.github.io/UATTest.github.io/",
+  "env": {},
+  "specPattern": [
+    "cypress/e2e/myTest/*.feature"
+  ]
+}
