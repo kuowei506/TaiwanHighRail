@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://www.thsrc.com.tw/",
+  "baseUrl": "https://tholiday.thsrc.com.tw/",
   "env": {},
   "specPatterns": [
     "cypress/e2e/myTest/*.feature"

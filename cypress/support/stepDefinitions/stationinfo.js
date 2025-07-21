@@ -9,23 +9,23 @@ let environment=Cypress.env("environment")
 let testData;
 let path="";
 
-Given('設定測試檔案{string}', (dataFilePath) => {
-     path=environment.concat('/',dataFilePath)
-   cy.fixture(path).as("testData")
-   .then(data => {
-     cy.log(data)
-     testData=data
-   });
-});
+// Given('設定測試檔案{string}', (dataFilePath) => {
+//      path=environment.concat('/',dataFilePath)
+//    cy.fixture(path).as("testData")
+//    .then(data => {
+//      cy.log(data)
+//      testData=data
+//    });
+// });
 
-Given('進入台灣高鐵網站首頁', () => {
-    cy.visit('https://www.thsrc.com.tw/');
-});
+// Given('進入台灣高鐵網站首頁', () => {
+//     cy.visit('https://www.thsrc.com.tw/');
+// });
 
-Then('確認視窗我同意',() => {
-    cy.get('div[role="dialog"]').contains('button','我同意').click({ force: true });
-    cy.wait(2000);
-})
+// Then('確認視窗我同意',() => {
+//     cy.get('div[role="dialog"]').contains('button','我同意').click({ force: true });
+//     cy.wait(2000);
+// })
 
 When('點擊車站資訊', () => {
     cy.get('a[title="車站資訊"]').should('be.visible').click({ force: true });

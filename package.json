@@ -16,13 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^18.0.6",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
-    "cypress": "^13.7.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.3",
+    "cypress": "^13.17.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-mochawesome-reporter": "^3.5.1",
-    "esbuild": "^0.19.4",
-    "multiple-cucumber-html-reporter": "^3.5.0",
+    "cypress-plugin-api": "^2.11.1",
     "cypress-xpath": "^2.0.1",
-    "cypress-plugin-api": "^2.11.1"
+    "esbuild": "^0.19.4",
+    "multiple-cucumber-html-reporter": "^3.5.0"
   },
   "cypress-cucumber-preprocessor": {
     "GlobalStepDefinitions": true,

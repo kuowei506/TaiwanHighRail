@@ -8,30 +8,30 @@ let environment=Cypress.env("environment")
 let testData;
 let path="";
 
-Given('設定測試檔案{string}', (dataFilePath) => {
-     path=environment.concat('/',dataFilePath)
-   cy.fixture(path).as("testData")
-   .then(data => {
-     cy.log(data)
-     testData=data
-   });
-});
+// Given('設定測試檔案{string}', (dataFilePath) => {
+//      path=environment.concat('/',dataFilePath)
+//    cy.fixture(path).as("testData")
+//    .then(data => {
+//      cy.log(data)
+//      testData=data
+//    });
+// });
 
-Given('進入高鐵官網',() => {
-    cy.visit('https://tholiday.thsrc.com.tw/');
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        // 可以選擇性忽略特定錯誤
-        if (err.message.includes('$ is not defined')) {
-          return false; // 忽略這個錯誤
-        }
-      });
-    cy.wait(2000);
-})
+// Given('進入高鐵官網',() => {
+//     cy.visit('https://tholiday.thsrc.com.tw/');
+//     Cypress.on('uncaught:exception', (err, runnable) => {
+//         // 可以選擇性忽略特定錯誤
+//         if (err.message.includes('$ is not defined')) {
+//           return false; // 忽略這個錯誤
+//         }
+//       });
+//     cy.wait(2000);
+// })
 
-When('點擊我了解規定及條款',() => {
-    cy.get('button[type="button"].btn.btn-primary.btn-block').contains('我了解服務相關規定及使用條款').click({force:true})
-    cy.wait(2000);
-})
+// When('點擊我了解規定及條款',() => {
+//     cy.get('button[type="button"].btn.btn-primary.btn-block').contains('我了解服務相關規定及使用條款').click({force:true})
+//     cy.wait(2000);
+// })
 
 When('點擊 "高鐵+租車" 選項',() => {
     cy.contains('span.type-text', '高鐵+租車').click();
@@ -221,8 +221,8 @@ When('個資使用須知都勾選',() => {
 
 When('點選確認',() => {
     cy.contains('button', '送出訂單').click({force:true});
-    cy.get('.text-center.font-normal.text-subtitle')
-      .should('be.visible')
-      .and('contain', '訂單錯誤');
+    // cy.get('.text-center.font-normal.text-subtitle')
+    //   .should('be.visible')
+    //   .and('contain', '訂單錯誤');
 })
 

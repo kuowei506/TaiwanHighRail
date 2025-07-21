@@ -14,10 +14,14 @@ module.exports = defineConfig({
       inlineAssets: true,
       saveAllAttempts: false,
     },
+    video: true,
+    videoCompression: true,
     setupNodeEvents,
   },
     viewportWidth: 1200, // 设置宽度
     viewportHeight: 932, // 设置高度
+    // browser: "chrome",
+    // headless: true,
 });
 
 // module.exports = {
